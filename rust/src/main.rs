@@ -1,6 +1,7 @@
 use std::env;
 
 mod p1;
+mod p2;
 
 fn main() {
     if env::args().len() != 2 {
@@ -10,6 +11,7 @@ fn main() {
     let id = env::args().nth(1).unwrap();
     match id.as_str() {
         "1" => p1::test(),
+        "2" => p2::test(),
         _ => println!("[ERROR] Project with id '{id}' does not exist."),
     }
 }
